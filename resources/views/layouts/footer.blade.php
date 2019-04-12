@@ -1,21 +1,9 @@
-<footer class="footer">
-    <div class="container-fluid">
-        <nav class="float-left">
-        <ul>
-            <li>
-            <a href="https://www.creative-tim.com">
-                Creative Tim
-            </a>
-            </li>
-        </ul>
-        </nav>
-        <div class="copyright float-right">
-        &copy;
-        <script>
-            document.write(new Date().getFullYear())
-        </script>, made with <i class="material-icons">favorite</i> by
-        <a href="https://www.creative-tim.com" target="_blank">Creative Tim</a> for a better web.
-        </div>
-        <!-- your footer here -->
-    </div>
+<script type="text/javascript" src="{{ url('/js/jquery-3.3.1.min.js') }}"></script>
+<script type="text/javascript" src="{{ url('/js/bootstrap.min.js') }}"></script>
+<script type="text/javascript" src="{{ url('/js/mdb.min.js') }}"></script>
+
+@yield('script-footer')
+
+<footer class="page-footer text-center font-small primary-color-dark darken-2 mt-4 wow fadeIn">
+
 </footer>

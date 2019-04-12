@@ -19,7 +19,7 @@ class PerformanceComercialRepository
             $query->where('co_sistema', 1);
             $query->where('in_ativo', 'S');
             $query->whereIn('co_tipo_usuario', [0,1,2]);
-        })->pluck('co_usuario', 'no_usuario');
+        })->pluck('no_usuario', 'co_usuario');
     }
 
     public function getReceitaLiquida($consulto, $month = null, $year = null) {

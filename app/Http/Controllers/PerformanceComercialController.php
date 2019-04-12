@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Redirect;
 use App\Http\Controllers\Controller;
+use App\Services\DateTimeServices;
 
 use App\Repositories\PerformanceComercialRepository;
 
@@ -27,7 +28,11 @@ class PerformanceComercialController extends Controller
      */
     public function index()
     {
-        $params['consultores'] = $this->performanceComercialRepository->getConsultores();
+        $params = [
+            'consultores' => $this->performanceComercialRepository->getConsultores(),
+            'meses' => DateTimeServices::$MESES,
+            'anos' => DateTimeServices::$ANOS
+        ];
 
         return view('comercial.performance.index', $params);
     }
